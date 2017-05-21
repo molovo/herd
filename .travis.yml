@@ -1,1 +1,14 @@
 language: crystal
+
+script: crystal doc
+
+deploy:
+  local_dir: doc
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+
+notifications:
+  email: false
