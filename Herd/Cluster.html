@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/molovo/herd">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Herd::Cluster - github.com/molovo/herd</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/molovo/herd/Herd" data-name="herd">
+      <a href="../Herd.html">Herd</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/molovo/herd/Herd/Cluster" data-name="herd::cluster">
+      <a href="../Herd/Cluster.html">Cluster</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Herd::Cluster
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Herd/Cluster.html">Herd::Cluster</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/molovo/herd/blob/99988ce505e598623666d5e1c8bc37dd93a0a4bc/src/herd/cluster.cr#L2" target="_blank">herd/cluster.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28threads%3AInt32%29-class-method" class="signature"><strong>.new</strong>(threads : Int32)</a>
+        
+          <div class="summary"><p>Create the cluster</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#thread-class-method" class="signature"><strong>.thread</strong></a>
+        
+          <div class="summary"><p>Return the current thread</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#execute%28%26block%29-instance-method" class="signature"><strong>#execute</strong>(&block)</a>
+        
+          <div class="summary"><p>Specify a block to execute <code>@threads</code> times</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fork%28env%3AHash%29-instance-method" class="signature"><strong>#fork</strong>(env : Hash)</a>
+        
+          <div class="summary"><p>Fork the current process</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_master-instance-method" class="signature"><strong>#is_master</strong></a>
+        
+          <div class="summary"><p>Check if the current process is the master</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_slave-instance-method" class="signature"><strong>#is_slave</strong></a>
+        
+          <div class="summary"><p>Check if the current process is a slave</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="new&#40;threads:Int32&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(threads : Int32)
+
+        <a class="method-permalink" href="#new%28threads%3AInt32%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Create the cluster</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/herd/blob/99988ce505e598623666d5e1c8bc37dd93a0a4bc/src/herd/cluster.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="thread-class-method">
+      <div class="signature">
+        
+        def self.<strong>thread</strong>
+
+        <a class="method-permalink" href="#thread-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Return the current thread</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/herd/blob/99988ce505e598623666d5e1c8bc37dd93a0a4bc/src/herd/cluster.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="execute&#40;&amp;block&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>execute</strong>(&block)
+
+        <a class="method-permalink" href="#execute%28%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specify a block to execute <code>@threads</code> times</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/herd/blob/99988ce505e598623666d5e1c8bc37dd93a0a4bc/src/herd/cluster.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fork&#40;env:Hash&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>fork</strong>(env : Hash)
+
+        <a class="method-permalink" href="#fork%28env%3AHash%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Fork the current process</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/herd/blob/99988ce505e598623666d5e1c8bc37dd93a0a4bc/src/herd/cluster.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_master-instance-method">
+      <div class="signature">
+        
+        def <strong>is_master</strong>
+
+        <a class="method-permalink" href="#is_master-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Check if the current process is the master</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/herd/blob/99988ce505e598623666d5e1c8bc37dd93a0a4bc/src/herd/cluster.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_slave-instance-method">
+      <div class="signature">
+        
+        def <strong>is_slave</strong>
+
+        <a class="method-permalink" href="#is_slave-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Check if the current process is a slave</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/herd/blob/99988ce505e598623666d5e1c8bc37dd93a0a4bc/src/herd/cluster.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

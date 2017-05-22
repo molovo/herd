@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/molovo/herd">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/doc.js"></script>
+  <title>README - github.com/molovo/herd</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li class="current"><a href="index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent " data-id="github.com/molovo/herd/Herd" data-name="herd">
+      <a href="Herd.html">Herd</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/molovo/herd/Herd/Cluster" data-name="herd::cluster">
+      <a href="Herd/Cluster.html">Cluster</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1>Herd</h1>
+
+<p>A simple module to help with running multi-threaded processes in <a href="https://crystal-lang.org" target="_blank">Crystal</a></p>
+
+<h2>Installation</h2>
+
+<p>Add this to your application's <code>shard.yml</code>:</p>
+
+<pre><code class='language-yaml'>dependencies:
+  herd:
+    github: molovo/herd</code></pre>
+
+<h2>Usage</h2>
+
+<pre><code class='language-crystal'><span class="k">require</span> <span class="s">&quot;herd&quot;</span>
+<span class="k">require</span> <span class="s">&quot;http/server&quot;</span>
+
+<span class="c"># Create a new cluster with 4 threads</span>
+cluster <span class="o">=</span> <span class="t">Herd</span><span class="t">::</span><span class="t">Cluster</span>.<span class="k">new</span> <span class="n">4</span>
+
+<span class="c"># Specify the process to run</span>
+cluster.execute <span class="k">do</span>
+  server <span class="o">=</span> <span class="t">HTTP</span><span class="t">::</span><span class="t">Server</span>.<span class="k">new</span>(<span class="n">8080</span>) <span class="k">do</span> <span class="o">|</span>context<span class="o">|</span>
+    context.response.print <span class="s">&quot;Hello World&#33;&quot;</span>
+  <span class="k">end</span>
+  puts <span class="s">&quot;Thread </span><span class="i">#{</span></span><span class="t">Herd</span><span class="t">::</span><span class="t">Cluster</span>.thread<span class="s"><span class="i">}</span> listening on http://127.0.0.1:8080&quot;</span>
+  server.listen <span class="n">true</span>
+<span class="k">end</span></code></pre>
+
+<h2>Contributing</h2>
+
+<ol><li>Fork it ( https://github.com/molovo/cluster/fork )</li><li>Create your feature branch (git checkout -b my-new-feature)</li><li>Commit your changes (git commit -am 'Add some feature')</li><li>Push to the branch (git push origin my-new-feature)</li><li>Create a new Pull Request</li></ol>
+
+<h2>Contributors</h2>
+
+<ul><li><a href="https://github.com/molovo" target="_blank">molovo</a> James Dinsdale - creator, maintainer</li></ul>
+</div>
+</body>
+</html>
