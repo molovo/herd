@@ -24,7 +24,9 @@ module Herd
         end
         sleep
       else
-        @@thread = ENV["i"].to_i32
+        if ENV.has_key? "i"
+          @@thread = ENV["i"].to_i32
+        end
 
         # Since we are not on the master thread, execute the block
         block.call
