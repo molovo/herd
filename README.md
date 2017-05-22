@@ -19,14 +19,14 @@ require "herd"
 require "http/server"
 
 # Create a new cluster with 4 threads
-cluster = Cluster.new 4
+cluster = Herd::Cluster.new 4
 
 # Specify the process to run
 cluster.execute do
   server = HTTP::Server.new(8080) do |context|
     context.response.print "Hello World!"
   end
-  puts "Thread #{Cluster.thread} listening on http://127.0.0.1:8080"
+  puts "Thread #{Herd::Cluster.thread} listening on http://127.0.0.1:8080"
   server.listen true
 end
 ```
